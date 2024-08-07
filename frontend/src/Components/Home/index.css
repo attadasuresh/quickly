@@ -1,0 +1,102 @@
+.home-main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 46vh;
+    background-color: rgb(12, 118, 189);
+    margin: 1.5vw;
+}
+.Home-heading{
+   font-size: 2.7vw;
+   color: white;
+}
+.home-paragraph{
+    font-size: 1.1vw;
+    width: 35vw;
+   text-align: justify;
+   color: white;
+}
+.home-e2e-spantag{
+    color: rgb(245, 179, 38);
+}
+.home-image{
+    width: 30vw;
+}
+.home-button{
+    width: 35vw;
+    padding: 12px;
+    font-weight: bold;
+    background-color:rgb(245, 179, 38);
+    border: none;
+    border-radius: 4px;
+    font-family: roboto;
+    font-size: 1.2vw;
+}
+.home-head2{
+    font-family: roboto;
+    font-size: 2vw;
+    padding: 8px;
+    text-align: center;
+    margin: 0px ;
+
+}
+.home-head-recruting{
+    font-size: 1.5vw;
+    text-align: center;
+}
+.home-para-recruting{
+    font-size: 1vw;
+    width: 20vw;
+    text-align: justify;
+}
+.home-card-container{
+    width: 20vw;
+    height: 11vw;
+    box-shadow: 0 2px 8px 0 rgba(14, 13, 13, 0.678), 0 4px 20px 0 rgba(0, 0, 0, 0.603);
+padding: 10px;
+margin: 20px;
+border-radius: 7px;
+
+}
+.home-main-card-containter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.continuous-horizontal-scroll-container {
+    width: 100%; /* Adjust this as per your layout */
+    overflow: hidden; /* Hide the overflowing content */
+    
+  }
+  
+  .content {
+    display: flex;
+    animation: scroll 20s linear infinite; /* Adjust animation duration as needed */
+  }
+  
+  .content-item {
+    flex-shrink: 0; /* Prevent items from shrinking */
+    padding: 10px; /* Adjust padding as needed */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%); /* Move content from left to right */
+    }
+  }
+  .home-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    
+  }
+  .icon{
+    margin-right: 16px;
+    color:rgb(12, 118, 189);
+    font-size: 2vw;
+  }
