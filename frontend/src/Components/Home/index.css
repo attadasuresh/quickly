@@ -10,6 +10,7 @@
 .Home-heading{
    font-size: 2.7vw;
    color: white;
+   font-family: roboto;
 }
 .home-paragraph{
     font-size: 1.1vw;
@@ -19,6 +20,8 @@
 }
 .home-e2e-spantag{
     color: rgb(245, 179, 38);
+    font-family: roboto;
+    font-weight: bold;
 }
 .home-image{
     width: 30vw;

@@ -1,10 +1,9 @@
 import React from 'react'
 import './index.css'
-const index = () => {
+const Login = () => {
   return (
   <>
   
-  <div class="home-container">
             <div class="login-background-img-full">
                 <div class="login-background-img">
                     <form  class="login-card">
@@ -37,11 +36,10 @@ const index = () => {
                     />
                 </div>
             </div>
-        </div>
   
   
   </>
   )
 }
 
-export default index
+export default Login

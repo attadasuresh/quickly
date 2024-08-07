@@ -1,7 +1,27 @@
 .login-background-img-full {
-    background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA1L2pvYjE4NzItYmFja2dyb3VuZC1zYXZlLTA3Yy5qcGc.jpg");
+    position: relative;
     height: 90vh;
+    overflow: hidden; /* Ensures the pseudo-element doesn’t overflow */
+}
+
+.login-background-img-full::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/public/images/5fz9SMYxWbv44jFVcD4vmd-1200-80.jpg");
     background-size: cover;
+    background-position: center;
+    filter: blur(9px); /* Adjust the blur value as needed */
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+.login-background-img-content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the blurred background */
+    /* Add other styling for your content here */
 }
 
 .login-background-img {

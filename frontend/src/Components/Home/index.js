@@ -12,13 +12,13 @@ import { HiMiniComputerDesktop } from "react-icons/hi2";
 import { SiOnlyoffice } from "react-icons/si";
 import { PiBuildingOfficeBold } from "react-icons/pi";
 import './index.css'
-const index = () => {
+const Home = () => {
   return (
    <>
     <div className="home-main-container">
                 <div>
                     <h1 className="Home-heading">
-                        <span className="home-e2e-spantag">E2E</span> TRACKING SERVICES
+                        <span className="home-e2e-spantag">QUICKLY</span>  SERVICES
                     </h1>
                     <p className="home-paragraph">
                         Our comprehensive E2E tracking services, managing recruiting, bench
@@ -188,4 +188,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Home
