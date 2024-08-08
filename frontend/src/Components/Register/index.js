@@ -6,16 +6,14 @@ const Register = () => {
     const[registerdata,setRegisterdata]=useState({
         fullname:'',
         email:'',
-        phonenumber:'',
+        phonenumber:'', 
         gender:'',
         howdoknow:''
     })
     const{fullname,email,phonenumber,gender,howdoknow}=registerdata;
-    
     const formHandler=(e)=>{
         setRegisterdata({...registerdata,[e.target.name]:e.target.value})
     }
-
     const submitHandler=(e)=>{
         e.preventDefault();        
         axios.post('http://localhost:4000/user',registerdata)
