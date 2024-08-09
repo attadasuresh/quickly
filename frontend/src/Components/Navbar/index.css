@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    text-align: center;
 }
 .nav-elements{
     color: white;
@@ -18,4 +19,7 @@
     font-family: roboto;
     font-weight: bold;
     
+}
+.logo-home{
+    height: 5vh;
 }

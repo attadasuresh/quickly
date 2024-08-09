@@ -59,6 +59,20 @@ app.post("/login", (req, res) => {
   });
 });
 
+
+//dashboard get data
+
+app.get('/registerdata',(req,res)=>{
+  const sql= `SELECT * FROM registerform`;
+  db.query(sql,(err,result)=>{
+if(err){
+  return res.json({message:"error inside server"});
+}
+return res.json(result);
+
+  })
+})
+
 app.listen(4000, () => {
   console.log("successfully running");
 });

@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <div className="nav-main-container">
         <Link to='./'>
-          <li className="nav-elements">Home</li>
+          <li className="nav-elements"><img src="images\image.png" alt="logo" className="logo-home"/></li>
         </Link>
         <div className="nav-home-about-container">
 
@@ -19,6 +19,7 @@ const Navbar = () => {
         <Link to='./Login'>
           <li className="nav-elements">Login</li>
         </Link>
+
  
       
         
