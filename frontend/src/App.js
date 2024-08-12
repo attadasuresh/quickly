@@ -5,10 +5,7 @@ import Navbar from './Components/Navbar'
 import Login from './Components/Login'
 import Register from './Components/Register'
 import Dashboard from './Components/Dashboard'
-
-
-
-
+import Editor from './Components/Editor'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -23,9 +20,7 @@ function App() {
           <Route path='/Login' element={<Login/>}/>
           <Route path='/Register' element={<Register/>}/>
           <Route path='/Dashboard' element={<Dashboard/>}/>
-
-
-
+          <Route path='/Editor' element={<Editor/>}/>
         </Routes>
       </BrowserRouter>
     </>

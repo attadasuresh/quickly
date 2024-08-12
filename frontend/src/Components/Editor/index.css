@@ -1,0 +1,61 @@
+
+.editor-maincontainer{
+    display: flex;
+    flex-direction: row;
+    height: 87vh;
+    width: 100vw;
+}
+
+.editor-sidebar-full-container{
+    background-color: rgb(3, 106, 175);
+    height: 87vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.editor-profil-card-container{
+    display: flex;
+    flex-direction: row;
+padding: 1vw;
+padding-left: 1.4vw;
+background-color: transparent;
+border: none;
+}
+
+.editor-profil-image{
+    font-size: 2vw;
+    color: white;
+    
+    
+}
+.editor-profil-heading{
+    font-size: 1.4vw;
+    padding-left: 1vw;
+    color: white;
+    font-family: roboto;
+
+}
+.editor-search-input{
+    width: 19vw;
+    padding: 0.3vw;
+    border-radius: 6px;
+    border: none;
+}
+.editor-search-to-review-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.editor-search-input {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .editor-search-input::placeholder {
+    color: #888; /* Light gray color for the placeholder text */
+    opacity: 1; /* Ensure the placeholder is fully visible */
+  }
