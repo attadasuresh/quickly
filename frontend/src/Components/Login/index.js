@@ -3,6 +3,7 @@ import './index.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // navigate after login page
 import { baseUrl } from '../config';
+import Cookies from 'js-cookie'
 
 const Login = () => {
     const [logindata, setLogindata] = useState({
@@ -20,7 +21,11 @@ const Login = () => {
         e.preventDefault();
         axios.post(`${baseUrl}login`, { ...logindata }) 
             .then((res) => {
-                navigate('/Dashboard');         // navigate after login page
+                console.log(res.data);
+                Cookies.set("jsonToken",res.data.jsonToken,{expires:30})
+                navigate('/Editor');     
+      window.location.reload()
+      // navigate after login page
             })
             .catch((err) =>{
                 console.log(err.response ? err.response.data.message : err.message)

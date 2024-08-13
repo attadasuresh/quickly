@@ -2,6 +2,9 @@ const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 const app = express();
+const jwstoken = require("jsonwebtoken")
+
+
 
 app.use(express.json());
 app.use(cors({ origin: "http://localhost:3000" }));
@@ -51,7 +54,8 @@ app.post("/login", (req, res) => {
       console.log(result.data);
 
       if (result.length !== 0) {
-        res.status(200).json("successfully login");
+        const token = jwstoken.sign({username:result[0].email},"securetetoken")
+        res.status(200).json({jsonToken:token});
       } else {
         res.status(500).json({ message: "Wrong usernme or password" });
       }

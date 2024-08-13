@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './index.css'
+import Cookies from 'js-cookie'
 const Navbar = () => {
+  const token = Cookies.get("jsonToken")
+  const handileOnClick =()=>{
+    Cookies.remove("jsonToken")
+      window.location.reload()
+  }
   return (
     <>
       <div className="nav-main-container">
@@ -18,9 +24,12 @@ const Navbar = () => {
         <Link to='./Register'>
           <li className="nav-elements">User-Register</li>
         </Link>
-        <Link to='./Login'>
+{!token ?  <Link to='./Login'>
           <li className="nav-elements">Login</li>
-        </Link>
+        </Link> : <button onClick={handileOnClick}>Logout</button>  }
+       
+
+
 
 
  
