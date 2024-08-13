@@ -7,21 +7,19 @@ import { FaStar } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import { MdOutlineInsertPhoto } from "react-icons/md";
 import { MdOutlineStorage } from "react-icons/md";
-
+import Maineditor from '../Maineditor'                      // 1 import Maineditor because its add first button Maineditor  to clickit 
+import Userdata from '../Userdata'
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 
 import "./index.css";
 
 const Editor = () => {
-  const [sideBarButton, setSideBarButton] = useState("Home");
+  const [sideBarButton, setSideBarButton] = useState("Maineditor"); // 2 adding Maineditor inbuilt showing first page 
 
   const [searchValue, setSearchValue] = useState("");
 
   const [isOpen, setIsOpen] = useState(true);
 
-  const Home = () => {
-    return <h1>home</h1>;
-  };
   const Search = () => {
     return <h1>Search</h1>;
   };
@@ -30,7 +28,7 @@ const Editor = () => {
   };
   const sidebarData = [
     {
-      name: "Home",
+      name: "Maineditor",    // 3 adding in object that Maineditor 
       icon: FaHome,
       id: 1,
     },
@@ -55,18 +53,20 @@ const Editor = () => {
       id: 5,
     },
     {
-      name: "Review",
+      name: "Userdata",
       icon: FaStar,
       id: 6,
     },
   ];
   const dashBoardView = () => {
-    if (sideBarButton === "Home") {
-      return <Home />;
-    } else if (sideBarButton === "Search") {
-      return <Search />;
-    } else if (sideBarButton === "Edit") {
+    if (sideBarButton === "Maineditor") {          // 4 we click Maineditor button it is open 
+      return <Maineditor />;
+    } else if (sideBarButton === "Search") {          // we click Search button it is open      
+      return <Search />;  
+    } else if (sideBarButton === "Edit") {          // same type all components buttons adding
       return <Edit />;
+    }else if (sideBarButton === "Userdata") {          // same type all components buttons adding
+      return <Userdata />;
     }
   };
   // 2 after filter the data
@@ -81,7 +81,7 @@ const Editor = () => {
         style={{ position: isOpen ? "relative" : "absolute" }}
       >
         <div className="editor-search-to-review-container">
-          <div className="editor-profil-card-container-1">
+          <div className="editor-profil-card-container-1"> 
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="editor-profil-image1"
@@ -115,21 +115,25 @@ const Editor = () => {
         </div>
 
         <div className="editor-profil-card-container">
-          <IoMdSettings className="editor-profil-image" />
+          <IoMdSettings className="editor-profil-image"/>
           <h1 className="editor-profil-heading">Settings</h1>
         </div>
       </div>
 
+
+
+       {/*  this is rightside open dashboard like content writing  */}
       <div>
         {!isOpen && (
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen(!isOpen)}  
             className="editor-open-button"
           >
             <MdOutlineStorage />
           </button>
+          // this is function calling inthe dashBoardView using of {} must
         )}
-        {dashBoardView()}
+        {dashBoardView()}                    
       </div>
     </div>
   );

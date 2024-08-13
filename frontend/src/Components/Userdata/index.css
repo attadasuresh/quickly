@@ -1,0 +1,37 @@
+.userdata-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    min-height: 80vh;
+    margin: 4vw;
+    border: 1px solid black;
+
+    
+}
+.table-container{
+    width: 75vw;
+     text-align: center;
+}
+.userdata-headings-container{
+    padding: 1vw;
+    border-bottom: 1px solid black;
+    background-color: rgb(22, 163, 228);
+    color: white;
+    font-size: 1.3vw;
+}
+.userdata-text-container{
+    font-family: roboto;
+    font-size: 1.5vw;
+    padding: 1vw;
+}
+.userdata-delet-button{
+    background-color: rgb(212, 26, 26);
+    border: none;
+    font-size: 2vh;
+    color: white;
+    width: 8vh;
+    height: 4vh;
+    box-shadow: 0 2px 8px 0 rgba(14, 13, 13, 0.678), 0 4px 20px 0 rgba(0, 0, 0, 0.603);
+
+    
+}
